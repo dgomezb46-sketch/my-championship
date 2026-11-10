@@ -1,21 +1,32 @@
-# My Championship 2.2 — PWA
+# My Championship 3.0 — PWA
 
-Esta carpeta contiene una versión separada de My Championship 2.1.
+## Publicación
+1. Descomprime esta carpeta.
+2. Sube **todo su contenido** a la carpeta donde quieras publicar My Championship 3.0 en GitHub Pages.
+3. Mantén juntos `index.html`, `manifest.json`, `service-worker.js` y los dos iconos.
+4. Abre la URL publicada y, en Android Chrome, usa el menú ⋮ → Instalar aplicación / Añadir a pantalla principal.
 
-## Publicación en GitHub Pages
-1. Sube la carpeta completa `my-championship-2.2` al repositorio, sin reemplazar los archivos que ya están en la raíz.
-2. Activa GitHub Pages desde la rama `main` y la carpeta raíz del repositorio, si todavía no está activo.
-3. Abre `https://TU-USUARIO.github.io/TU-REPOSITORIO/my-championship-2.2/`.
-4. En Android, abre esa dirección en Chrome, menú ⋮ → **Instalar aplicación** o **Añadir a pantalla principal**.
+## Datos y compatibilidad
+- Se conserva la clave local `myChampionship.v22` para que la actualización lea los mismos datos guardados por 2.2 en el mismo origen.
+- No borres la versión anterior hasta comprobar que 3.0 abre correctamente y que tus datos aparecen.
+- Exporta un backup JSON antes de actualizar. Los datos permanecen en el almacenamiento local del navegador/dispositivo; no se sincronizan automáticamente entre dispositivos.
+- El sistema de puntos, WDC, WCC, mercado de pilotos, reglas de clasificación y resultados existentes se mantienen.
 
-## Importante sobre los datos
-- 2.2 usa una clave de almacenamiento distinta (`myChampionship.v22`), para no sobrescribir los datos locales de 2.1.
-- Los datos no se sincronizan automáticamente entre versiones ni entre dispositivos.
-- Exporta un backup JSON desde Administración en 2.1 y luego impórtalo en 2.2 si quieres continuar con tu campeonato.
-- Conserva siempre la carpeta/versión 2.1 como respaldo.
+## Novedades 3.0
+- Interfaz renovada con estética Motorsport.
+- Registro de vuelta rápida en cada sesión de carrera. La VR se muestra en resultados y en las estadísticas por piloto, sin otorgar puntos.
+- Formato automático de tiempos `mm:ss.mmm` mientras se escribe, también para la clasificación única.
+- Botón para importar una clasificación desde imagen en Q1/Q2/Q3 y Qualifying única. El reconocimiento busca texto por filas, prioriza el nombre del piloto y usa el equipo como apoyo; no depende de colores, tipografías ni del estilo visual del juego.
+- La importación no guarda nada automáticamente: los tiempos detectados quedan en los campos editables para revisarlos antes de pulsar Guardar.
 
-## Funciones añadidas en esta versión
-- Estados de piloto: titular, reserva activo y reserva inactivo.
-- Mercado de pilotos: transferencias e intercambios; los puntos WDC previos al movimiento dejan de contar para ese piloto, mientras que los puntos WCC históricos permanecen en su escudería.
-- Entrada abreviada de tiempos: por ejemplo, `106589` se convierte en `1:06.589` al salir del campo.
-- Clasificación configurable por GP: Q1/Q2/Q3 o una sola sesión Qualifying.
+## Limitación importante del OCR
+La importación de imágenes utiliza la API de reconocimiento de texto local `TextDetector` del navegador, cuando está disponible. El soporte varía según navegador y dispositivo; si el navegador no la incluye, la app avisa y permite seguir introduciendo los tiempos manualmente. No se envían imágenes a un servidor. Para disponer de OCR offline en todos los navegadores haría falta integrar y empaquetar un motor OCR completo y sus modelos, algo que no viene incluido en esta compilación.
+
+## Prueba recomendada
+Antes de usarlo en un GP real:
+1. Exporta un backup desde tu 2.2.
+2. Abre 3.0 en el mismo navegador/origen.
+3. Comprueba pilotos, equipos, calendario y resultados.
+4. Prueba un tiempo escribiendo `106589` (debe quedar `1:06.589`).
+5. Marca una VR en una carrera y comprueba que aparece en resultados/estadísticas y no cambia los puntos.
+6. Si `TextDetector` está disponible, prueba la importación con una captura clara y revisa cada fila antes de guardar.
