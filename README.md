@@ -30,3 +30,7 @@ Antes de usarlo en un GP real:
 4. Prueba un tiempo escribiendo `106589` (debe quedar `1:06.589`).
 5. Marca una VR en una carrera y comprueba que aparece en resultados/estadísticas y no cambia los puntos.
 6. Si `TextDetector` está disponible, prueba la importación con una captura clara y revisa cada fila antes de guardar.
+
+
+## Indicador de posiciones ganadas/perdidas
+En las tablas de resultados de carrera se muestra el cambio entre la posición de salida y la posición final: verde `3 ▲` si ganó tres posiciones, rojo `2 ▼` si perdió dos, y amarillo `—` si mantuvo su posición. Si no existe una clasificación de salida registrada, se muestra `N/D` para no inventar el dato. Para carreras sprint se compara la salida de SR con SQ; para la carrera principal se usa la clasificación correspondiente.

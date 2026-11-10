@@ -24,6 +24,88 @@ button{box-shadow:0 4px 12px #0003}
 button:not(.secondary):not(.ghost):not(.danger){background:linear-gradient(135deg,#ed1c24,#b90d18)}
 .navbtn.active{background:linear-gradient(90deg,#e10613 0%,#8c1420 100%)}
 .qualrow,.raceeditrow{border-bottom-color:#2a394a}
+
+
+/* Dashboard mobile-first · paddock timing-board style */
+.home-dashboard{display:grid;gap:14px}
+.home-standings{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
+.home-panel{min-width:0;background:linear-gradient(150deg,#172434 0%,#101925 100%);border:1px solid #2c3b4d;border-radius:13px;overflow:hidden;box-shadow:0 8px 24px #0004}
+.home-panelhead{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 13px;border-bottom:1px solid #304052;background:linear-gradient(90deg,#202f40,#172332)}
+.home-panelhead h3{font-size:12px;letter-spacing:1px;text-transform:uppercase;margin:0;font-weight:950}
+.home-panelhead .home-sub{font-size:9px;color:#91a4b9;letter-spacing:.8px;font-weight:800}
+.home-table{width:100%;border-collapse:collapse;table-layout:fixed}
+.home-table th{font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:#8296ad;text-align:left;padding:8px 9px;background:#0d1621}
+.home-table td{font-size:12px;padding:9px;border-top:1px solid #29394b;vertical-align:middle}
+.home-table tr:nth-child(1) td{background:#24354a}
+.home-table .home-pos{width:34px;font-weight:950;color:#a9bbcf;font-variant-numeric:tabular-nums}
+.home-table tr:nth-child(1) .home-pos{color:#ffdf75}
+.home-table .home-points{text-align:right;font-weight:950;font-variant-numeric:tabular-nums;white-space:nowrap}
+.home-driver{display:flex;align-items:center;gap:6px;min-width:0}
+.home-driver .flag{font-size:15px;flex:none}
+.home-driver b,.home-teamname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px}
+.home-teamname{display:flex;align-items:center;gap:7px}
+.home-teamname .teamdot{flex:none}
+.home-last .home-table td{padding-top:8px;padding-bottom:8px}
+.home-last .home-points{color:#d8e3f0}
+.home-tag{display:inline-block;color:#ffb4aa;background:#57232a;border:1px solid #8a3940;border-radius:4px;font-size:8px;padding:2px 4px;margin-left:4px;font-weight:900}
+.home-widget{position:relative}
+.home-widgethead{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid #304052}
+.home-widgethead h3{margin:0;font-size:13px;letter-spacing:.8px;text-transform:uppercase}
+.home-widgethead span{font-size:9px;color:#93a7bd;font-weight:800;letter-spacing:1px}
+.home-sliderbar{display:flex;gap:6px}
+.home-sliderbar button{width:27px;height:25px;padding:0;border-radius:5px;background:#2b3b4e;color:#e8eef5;font-size:15px;box-shadow:none}
+.home-track{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:11px;overscroll-behavior-x:contain}
+.home-track::-webkit-scrollbar{display:none}
+.home-gpcard{flex:0 0 min(88%,360px);min-width:0;scroll-snap-align:start;background:#0e1722;border:1px solid #2d3c4e;border-radius:10px;overflow:hidden}
+.home-gp-banner{min-height:88px;padding:13px 14px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;background:linear-gradient(115deg,#263e59,#17283b 65%,#401e29)}
+.home-gp-banner:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 17px,#ffffff08 17px 19px)}
+.home-gp-banner>*{position:relative}
+.home-gp-round{font-size:9px;color:#b5c7d9;text-transform:uppercase;letter-spacing:1.2px;font-weight:900}
+.home-gp-name{font-size:20px;line-height:1.1;font-weight:950;margin-top:4px}
+.home-gp-date{font-size:10px;color:#c0cedd;margin-top:5px}
+.home-gp-results{padding:9px 12px 10px}
+.home-gp-resultshead{font-size:9px;color:#8fa3b9;font-weight:900;letter-spacing:1px;margin-bottom:5px}
+.home-gp-resultrow{display:grid;grid-template-columns:22px minmax(0,1fr) 38px;gap:7px;align-items:center;padding:5px 0;border-bottom:1px solid #253547;font-size:10px}
+.home-gp-resultrow:last-child{border-bottom:0}
+.home-gp-resultrow .p{font-weight:950;color:#9db0c5}
+.home-gp-resultrow:nth-child(2) .p{color:#ffdb70}
+.home-gp-resultrow b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.home-gp-resultrow .pts{text-align:right;font-variant-numeric:tabular-nums;color:#cbd8e6;font-weight:850}
+.home-gp-upcoming{min-height:205px;display:flex;flex-direction:column;justify-content:flex-end}
+.home-gp-upcoming .home-gp-banner{flex:1;min-height:205px;padding:18px}
+.home-gp-upcoming .home-gp-name{font-size:25px;max-width:260px}
+.home-gp-upcoming .home-nextlabel{font-size:10px;color:#ff9d91;letter-spacing:1.4px;font-weight:950;margin-bottom:7px}
+.home-gp-footer{display:flex;justify-content:flex-end;padding:0 12px 12px}
+.home-calendar-link{background:transparent;border:1px solid #475b70;color:#dce7f2;padding:6px 10px;font-size:10px;box-shadow:none}
+.home-calendar-link:hover{background:#26384b}
+.home-empty{padding:18px 13px;color:#91a4b9;font-size:11px}
+@media(max-width:560px){
+ .home-dashboard{gap:11px}
+ .home-standings{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+ .home-panelhead{padding:10px 9px}
+ .home-panelhead h3{font-size:10px}
+ .home-panelhead .home-sub{font-size:8px}
+ .home-table th{font-size:8px;padding:7px 6px}
+ .home-table td{font-size:10px;padding:8px 6px}
+ .home-table .home-pos{width:25px}
+ .home-driver{gap:4px}
+ .home-driver .flag{font-size:13px}
+ .home-driver b,.home-teamname{font-size:9px}
+ .home-gpcard{flex-basis:88%}
+ .home-gp-banner{min-height:78px}
+}
+@media(max-width:360px){
+ .home-standings{gap:6px}
+ .home-panelhead h3{font-size:9px}
+ .home-table td{padding:7px 4px}
+ .home-driver b,.home-teamname{font-size:8px}
+}
+
+
+.position-delta{display:inline-flex;align-items:center;justify-content:center;gap:3px;min-width:30px;font-size:12px;font-weight:950;font-variant-numeric:tabular-nums;white-space:nowrap}
+.position-delta.up{color:#42d392}.position-delta.down{color:#ff626b}.position-delta.same{color:#f4c542}.position-delta.unavailable{color:#718096;font-size:10px}
+.home-gp-resultrow .position-delta{font-size:9px;min-width:26px;gap:2px}
+
 </style></head>
 <body><div class="app"><aside><div class="sidehead"><div class="brand">MY <span>CHAMPIONSHIP</span></div><div class="mode-switch"><button id="adminMode" class="active" onclick="setMode('admin')">⚙ Admin</button><button id="publicMode" onclick="setMode('public')">◎ Público</button></div></div><div id="navigation"></div><div class="sidefoot">MY CHAMPIONSHIP 3.0 · DATOS GUARDADOS EN ESTE DISPOSITIVO</div></aside><main class="main"><div class="topbar"><div><div class="eyebrow" id="eyebrow">Panel de control</div><h1 class="pagetitle" id="pageTitle">Inicio</h1></div><div class="topactions"><span class="seasonpill" id="seasonLabel">Temporada activa</span><button class="secondary tiny" id="switchButton" onclick="toggleMode()">Ver vista pública ↗</button></div></div><div id="content"></div></main></div><div class="modalbg" id="modalbg"><div class="modal" id="modal"></div></div>
 <script>
@@ -115,7 +197,35 @@ function render(){nav();$('adminMode').classList.toggle('active',mode==='admin')
 function table(headers,rows,empty='Todavía no hay registros.'){return `<div class="tablewrap"><table><thead><tr>${headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows||`<tr><td colspan="${headers.length}" class="empty">${empty}</td></tr>`}</tbody></table></div>`}
 function statCard(a,b,c){return `<div class="statcard"><div class="statlabel">${a}</div><div class="statvalue">${b}</div><div class="statnote">${c}</div></div>`}
 function banner(){let bg=db.season.banner?`background-image:linear-gradient(90deg,#080d18d9,transparent),url('${db.season.banner}')`:'';return `<div class="banner" style="${bg}"><div class="bannercontent"><div class="eyebrow">Campeonato de monoplazas</div><h2>${esc(db.season.name)}</h2><p>${db.teams.length} escuderías · ${db.drivers.length} pilotos · ${db.calendar.length} Grandes Premios</p></div></div>`}
-function dashboard(el){let w=calcStandings('wdc'),c=calcStandings('wcc'),last=[...db.results].sort((a,b)=>(b.date||'').localeCompare(a.date||''))[0];el.innerHTML=`${banner()}<div class="grid">${statCard('PILOTOS',db.drivers.length,'En parrilla')}${statCard('ESCUDERÍAS',db.teams.length,'Participantes')}${statCard('GRANDES PREMIOS',db.calendar.length,'En calendario')}${statCard('RESULTADOS',db.results.length,'Registros guardados')}</div><section class="section"><div class="sectionhead"><h2>🏆 Campeonato de pilotos</h2><button class="secondary tiny" onclick="go('standings')">Ver WDC</button></div>${table(['Pos.','Piloto','Escudería','Puntos'],w.slice(0,5).map((x,i)=>`<tr><td class="rank">${i+1}</td><td>${driverCell(x.id)}</td><td>${esc(tname(x.team))}</td><td class="points">${x.points}</td></tr>`).join(''))}</section><section class="section"><div class="sectionhead"><h2>🏗️ Campeonato de constructores</h2><button class="secondary tiny" onclick="go('standings')">Ver WCC</button></div>${table(['Pos.','Escudería','Puntos'],c.slice(0,5).map((x,i)=>`<tr><td class="rank">${i+1}</td><td>${teamCell(x.id)}</td><td class="points">${x.points}</td></tr>`).join(''))}</section><section class="section"><div class="sectionhead"><h2>Último registro</h2><button class="secondary tiny" onclick="go('results')">Ver resultados</button></div><div class="card">${last?`<b>${esc(gpname(last.gpId))} · ${sessionLabel(last.session)}</b><p class="muted">${esc(dname(last.driverId))} · ${last.time?esc(last.time):'P'+(last.position||'—')}</p>`:'Todavía no hay sesiones registradas. ¡A estrenar el campeonato! 🏁'}</div></section>`}
+
+function homeRaceSession(g){return g?.sprint?'fr':'race'}
+function homeRaceRows(g){if(!g)return[];let s=homeRaceSession(g);return resultsFor(g.id,s).filter(r=>Number(r.position)>0&&r.status!=='DNS'&&r.status!=='DSQ').sort((a,b)=>Number(a.position)-Number(b.position))}
+function homeRaceCompleted(g){return !!g&&resultsFor(g.id,homeRaceSession(g)).length>0}
+function homeDriverName(id){let d=db.drivers.find(x=>x.id===id);return d?.name||dname(id)}
+function homeStandingsPanel(title,sub,rows,type){
+ let body=rows.length?rows.map((x,i)=>type==='wdc'?`<tr><td class="home-pos">${i+1}</td><td><div class="home-driver"><span class="flag">${esc(db.drivers.find(d=>d.id===x.id)?.flag||'🏁')}</span><b>${esc(homeDriverName(x.id))}</b></div></td><td class="home-points">${x.points}</td></tr>`:`<tr><td class="home-pos">${i+1}</td><td><div class="home-teamname">${teamCell(x.id)}</div></td><td class="home-points">${x.points}</td></tr>`).join(''):`<tr><td colspan="3" class="home-empty">Sin puntos todavía</td></tr>`;
+ return `<section class="home-panel"><div class="home-panelhead"><h3>${title}</h3><span class="home-sub">${sub}</span></div><table class="home-table"><thead><tr><th class="home-pos">POS</th><th>${type==='wdc'?'PILOTO':'ESCUDERÍA'}</th><th style="text-align:right">PTS</th></tr></thead><tbody>${body}</tbody></table></section>`;
+}
+function homeLatestRaceCard(g){
+ let rows=homeRaceRows(g).slice(0,5);
+ return `<section class="home-panel home-last"><div class="home-panelhead"><h3>Última carrera</h3><span class="home-sub">${g?esc(gpDisplay(g)):'SIN CARRERA'}</span></div>${rows.length?`<table class="home-table"><thead><tr><th class="home-pos">POS</th><th>PILOTO</th><th style="text-align:right">PTS</th></tr></thead><tbody>${rows.map(r=>`<tr><td class="home-pos">${r.position}</td><td><div class="home-driver"><span class="flag">${esc(db.drivers.find(d=>d.id===r.driverId)?.flag||'🏁')}</span><b>${esc(homeDriverName(r.driverId))}</b>${r.fastestLap?'<span class="home-tag">VR</span>':''}</div></td><td class="home-points">${pts(r)} <span style="margin-left:4px">${positionDeltaMarkup(g.id,homeRaceSession(g),r)}</span></td></tr>`).join('')}</tbody></table>`:`<div class="home-empty">Todavía no hay resultados de carrera.</div>`}</section>`;
+}
+function homeGpCard(g,index,completed,isNext){
+ let round=g.round?roundLabel(g.round):`RONDA ${index+1}`,date=g.date?esc(g.date):'Fecha por confirmar';
+ if(!completed)return `<article class="home-gpcard home-gp-upcoming" data-gp-id="${g.id}"><div class="home-gp-banner">${isNext?'<div class="home-nextlabel">PRÓXIMO GRAN PREMIO</div>':''}<div class="home-gp-round">${esc(round)}${g.sprint?' · SPRINT':''}</div><div class="home-gp-name">${esc(gpDisplay(g))}</div><div class="home-gp-date">${date}</div></div></article>`;
+ let rows=homeRaceRows(g).slice(0,10);
+ return `<article class="home-gpcard" data-gp-id="${g.id}"><div class="home-gp-banner"><div class="home-gp-round">${esc(round)} · FINALIZADO</div><div class="home-gp-name">${esc(gpDisplay(g))}</div><div class="home-gp-date">${date}</div></div><div class="home-gp-results"><div class="home-gp-resultshead">RESULTADO · TOP 10</div>${rows.length?rows.map(r=>`<div class="home-gp-resultrow"><span class="p">${r.position}</span><b>${esc(homeDriverName(r.driverId))}${r.fastestLap?' · VR':''}</b><span class="pts">${pts(r)} PTS<br>${positionDeltaMarkup(g.id,homeRaceSession(g),r)}</span></div>`).join(''):'<div class="home-empty">Sin resultados registrados</div>'}</div></article>`;
+}
+function homeSlide(direction){let track=document.getElementById('homeGpTrack');if(track){let card=track.querySelector('.home-gpcard');track.scrollBy({left:direction*(card?card.getBoundingClientRect().width+10:300),behavior:'smooth'});}}
+function dashboard(el){
+ let w=calcStandings('wdc'),c=calcStandings('wcc'),cal=orderedCalendar();
+ let completed=cal.filter(homeRaceCompleted),last=completed.length?completed[completed.length-1]:null;
+ let nextIndex=cal.findIndex(g=>!homeRaceCompleted(g));if(nextIndex<0)nextIndex=cal.length?cal.length-1:0;
+ let cards=cal.map((g,i)=>homeGpCard(g,i,homeRaceCompleted(g),i===nextIndex)).join('');
+ el.innerHTML=`<div class="home-dashboard">${banner()}<div class="home-standings">${homeStandingsPanel('WDC','PILOTOS',w.slice(0,5),'wdc')}${homeStandingsPanel('WCC','CONSTRUCTORES',c.slice(0,5),'wcc')}</div>${homeLatestRaceCard(last)}<section class="home-panel home-widget"><div class="home-widgethead"><div><h3>Calendario de temporada</h3><span>ANTERIORES · PRÓXIMOS</span></div><div class="home-sliderbar"><button aria-label="Carreras anteriores" onclick="homeSlide(-1)">‹</button><button aria-label="Próximas carreras" onclick="homeSlide(1)">›</button></div></div><div class="home-track" id="homeGpTrack">${cards||'<div class="home-empty">Añade Grandes Premios al calendario para verlos aquí.</div>'}</div><div class="home-gp-footer"><button class="home-calendar-link" onclick="go('calendar')">CALENDAR ↗</button></div></section></div>`;
+ let track=document.getElementById('homeGpTrack');if(track&&cal.length){let target=track.querySelector(`[data-gp-id="${cal[nextIndex]?.id}"]`);if(target)track.scrollLeft=Math.max(0,target.offsetLeft-track.offsetLeft);}
+}
+
 function driverCell(id){let d=db.drivers.find(x=>x.id===id);return `<span class="drivercell"><span class="flag">${esc(d?.flag||'🏁')}</span><b>${esc(d?.name||dname(id))}</b></span>`}function teamCell(id){let t=db.teams.find(x=>x.id===id);return `<span class="teamcell">${t?.logo?`<img class="logoimg" src="${t.logo}">`:`<span class="teamdot" style="background:${esc(t?.color||'#e63946')}"></span>`}<b>${esc(t?.name||tname(id))}</b></span>`}
 function drivers(el){let rows=db.drivers.map(d=>`<tr><td>${driverCell(d.id)}</td><td>${teamCell(d.teamId)}</td><td>${esc(d.number||'—')}</td><td><span class="tag ${(d.role||'titular')==='titular'?'green':(d.role||'')==='reserva-activo'?'':'red'}">${({titular:'Titular','reserva-activo':'Reserva activo','reserva-inactivo':'Reserva inactivo'})[d.role||'titular']}</span></td>${mode==='admin'?`<td><div class="actions"><button class="secondary tiny" onclick="editDriver('${d.id}')">Editar</button><button class="danger tiny" onclick="delDriver('${d.id}')">Eliminar</button></div></td>`:''}</tr>`).join('');el.innerHTML=`<div class="sectionhead"><div><h2>${mode==='admin'?'Parrilla de pilotos':'Pilotos del campeonato'}</h2><p>${db.drivers.length} pilotos registrados</p></div>${mode==='admin'?'<button onclick="addDriver()">+ Añadir piloto</button>':'<span class="publiclock">● Solo lectura</span>'}</div>${table(['Piloto','Escudería','Número','Estado',...(mode==='admin'?['Acciones']:[])],rows)}`}
 function market(el){let rows=db.transfers.slice().reverse().map(t=>`<tr><td>${esc(t.driver||'—')}</td><td>${esc(t.from||'—')}</td><td>${esc(t.to||'—')}</td><td>${new Date(t.date).toLocaleDateString('es-DO')}</td></tr>`).join('');el.innerHTML=`<div class="sectionhead"><div><h2>Mercado de pilotos</h2><p>Transferencias e intercambios entre escuderías.</p></div>${mode==='admin'?'<button onclick="openMarket()">＋ Nuevo movimiento</button>':''}</div><div class="notice">Los puntos WDC anteriores al movimiento dejan de contar para ese piloto. Los puntos WCC ya registrados permanecen en la escudería que los consiguió.</div>${table(['Piloto','Escudería anterior','Nueva escudería','Fecha'],rows,'Todavía no hay movimientos.')}`}
@@ -141,7 +251,29 @@ function selectGp(id){selectedGp=id;let g=db.calendar.find(x=>x.id===id);selecte
 function selectResultGroup(group){selectedResultGroup=group;let g=db.calendar.find(x=>x.id===selectedGp);selectedSession=group==='fq'&&g?.qualifyingMode==='single'?'qualifying':groupSession(group);render()}
 function selectSession(s){selectedSession=s;render()}
 
-function sessionTable(gpId,s){let arr=isQual(s)?qualifyStandings(gpId,s):resultsFor(gpId,s).slice().sort((a,b)=>(Number(a.position)||999)-(Number(b.position)||999));let rows=arr.map((r,i)=>{let d=db.drivers.find(x=>x.id===r.driverId);return `<tr><td class="rank">${isQual(s)?i+1:(r.position||'—')}</td><td>${driverCell(r.driverId)}</td><td>${esc(tname(r.teamId||d?.teamId))}</td>${isQual(s)?`<td>${esc(r.time||'—')}</td>`:`<td>${esc(r.status||'FIN')}</td><td>${r.fastestLap?'★ VR':'—'}</td><td class="points">${pts(r)}</td>`}${mode==='admin'?`<td><button class="danger tiny" onclick="deleteEntry('${r.id}')">Borrar</button></td>`:''}</tr>`}).join('');return table(isQual(s)?['Pos.','Piloto','Escudería','Tiempo',...(mode==='admin'?['Acciones']:[])]:['Pos.','Piloto','Escudería','Estado','VR','Pts.',...(mode==='admin'?['Acciones']:[])],rows)}
+
+function startingGridForRace(gpId,session){
+ let g=db.calendar.find(x=>x.id===gpId);if(!g)return[];
+ if(session==='sr')return qualifyStandings(gpId,'sq');
+ if((g.qualifyingMode||'elimination')==='single')return qualifyStandings(gpId,'qualifying');
+ let q3=qualifyStandings(gpId,'q3'),q2=qualifyStandings(gpId,'q2'),q1=qualifyStandings(gpId,'q1');
+ let used=new Set(),grid=[];
+ for(let r of q3.concat(q2,q1)){if(!used.has(r.driverId)){used.add(r.driverId);grid.push(r)}}
+ return grid;
+}
+function positionDeltaMarkup(gpId,session,result){
+ let finish=Number(result.position);
+ if(!Number.isFinite(finish)||finish<1)return '<span class="position-delta unavailable" aria-label="Posición final no disponible">N/D</span>';
+ let grid=startingGridForRace(gpId,session),idx=grid.findIndex(x=>x.driverId===result.driverId);
+ if(idx<0)return '<span class="position-delta unavailable" aria-label="Posición de salida no registrada">N/D</span>';
+ let gained=(idx+1)-finish;
+ if(gained===0)return '<span class="position-delta same" aria-label="Mantuvo su posición">—</span>';
+ if(gained>0)return `<span class="position-delta up" aria-label="Ganó ${gained} posiciones">${gained} ▲</span>`;
+ return `<span class="position-delta down" aria-label="Perdió ${Math.abs(gained)} posiciones">${Math.abs(gained)} ▼</span>`;
+}
+
+function sessionTable(gpId,s){let arr=isQual(s)?qualifyStandings(gpId,s):resultsFor(gpId,s).slice().sort((a,b)=>(Number(a.position)||999)-(Number(b.position)||999));let rows=arr.map((r,i)=>{let d=db.drivers.find(x=>x.id===r.driverId);return `<tr><td class="rank">${isQual(s)?i+1:(r.position||'—')}</td><td>${driverCell(r.driverId)}</td><td>${esc(tname(r.teamId||d?.teamId))}</td>${isQual(s)?`<td>${esc(r.time||'—')}</td>`:`<td>${esc(r.status||'FIN')}</td><td>${r.fastestLap?'★ VR':'—'}</td><td class="points">${pts(r)}</td><td>${positionDeltaMarkup(gpId,s,r)}</td>`}${mode==='admin'?`<td><button class="danger tiny" onclick="deleteEntry('${r.id}')">Borrar</button></td>`:''}</tr>`}).join('');return table(isQual(s)?['Pos.','Piloto','Escudería','Tiempo',...(mode==='admin'?['Acciones']:[])]:['Pos.','Piloto','Escudería','Estado','VR','Pts.','Pos. +/-',...(mode==='admin'?['Acciones']:[])],rows)}
+
 function renderSession(g,s){let isq=isQual(s),ids=eligibleDrivers(g.id,s);let rows=isq?qualifyStandings(g.id,s):resultsFor(g.id,s).slice().sort((a,b)=>(Number(a.position)||999)-(Number(b.position)||999));let info='';if(s==='q2')info=`Q2 solo permite registrar a los 15 mejores tiempos de Q1. Clasificados disponibles: ${ids.length}.`;if(s==='q3')info=`Q3 solo permite registrar a los 10 mejores tiempos de Q2. Clasificados disponibles: ${ids.length}.`;let out=`<div class="sessionblock"><div class="sessiontitle"><div><h3>${sessionLabel(s)}</h3><small>${isq?'Posiciones calculadas automáticamente por tiempo.':'Posición manual y estado; sin tiempo de carrera ni delta.'}</small></div>${mode==='admin'?`<button onclick="editSession('${g.id}','${s}')">${isq?'Registrar tiempos':'Registrar resultados'}</button>`:''}</div>${info?`<div class="locknote">${info}</div>`:''}${sessionTable(g.id,s)}</div>`;if(mode==='admin'&&isq&&s!=='sq'&&s!=='q1'&&!ids.length)out+=`<p class="help">Registra primero ${s==='q2'?'Q1':'Q2'} para habilitar esta ronda.</p>`;return out}
 function openGp(id){currentPage='gp';selectedGp=id;renderGpPage($('content'),id);nav();$('eyebrow').textContent='Detalle del Gran Premio';$('pageTitle').textContent=gpname(id)}
 function renderGpPage(el,id){let g=db.calendar.find(x=>x.id===id);if(!g){go('calendar');return}let ss=sessionsFor(g),pole=qualifyStandings(id,g.qualifyingMode==='single'?'qualifying':'q3')[0],raceSession=g.sprint?'fr':'race',race=resultsFor(id,raceSession),winner=race.find(r=>Number(r.position)===1&&r.status!=='DNS'&&r.status!=='DSQ');let featureGrid=qualifyStandings(id,g.qualifyingMode==='single'?'qualifying':'q3'),sprintGrid=qualifyStandings(id,'sq');let gridSection=(title,arr)=>arr.length?`<section class="section"><div class="sectionhead"><h2>${title}</h2></div>${table(['Salida','Piloto','Escudería'],arr.map((r,i)=>`<tr><td>${i+1}</td><td>${driverCell(r.driverId)}</td><td>${esc(tname(r.teamId||teamOfDriver(r.driverId)))}</td></tr>`).join(''))}</section>`:'';el.innerHTML=`<div class="sectionhead"><div><button class="ghost tiny" onclick="go('calendar')">← Calendario</button><h2 style="margin-top:10px">${esc(gpDisplay(g))}</h2><p>${g.date?esc(g.date)+' · ':''}${g.sprint?'Fin de semana con Sprint':'Fin de semana tradicional'}</p></div>${mode==='admin'?`<button onclick="editGp('${g.id}')">Editar GP</button>`:'<span class="publiclock">● Solo lectura</span>'}</div><div class="grid">${statCard('GANADOR',winner?esc(dname(winner.driverId)):'—','Carrera principal')}${statCard('POLE POSITION',pole?esc(dname(pole.driverId)):'—','Mejor tiempo de Q3')}${statCard('ESCUDERÍA GANADORA',winner?esc(tname(winner.teamId)):'—','Carrera principal')}${statCard('SESIONES',ss.length,'En este Gran Premio')}</div>${g.sprint?gridSection('Parrilla de Sprint · SQ',sprintGrid):''}${gridSection(g.qualifyingMode==='single'?'Parrilla de carrera · Qualifying':'Parrilla de carrera · Q3',featureGrid)}<section class="section"><div class="sectionhead"><h2>Resultados de todas las sesiones</h2></div>${ss.map(s=>`<div class="sessionblock"><div class="sessiontitle"><h3>${['q1','q2','q3'].includes(s)?(g.sprint?'FQ · ':'Qualifying · ')+s.toUpperCase():sessionLabel(s)}</h3>${mode==='admin'?`<button class="secondary tiny" onclick="editSession('${g.id}','${s}')">Editar sesión</button>`:''}</div>${sessionTable(g.id,s)}</div>`).join('')}</section>`}
